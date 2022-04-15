@@ -1,6 +1,6 @@
 import { ImTruck } from "react-icons/im";
 import { GiShoppingBag } from "react-icons/gi";
-
+import "../Header/Header.css";
 export default function TopNav() {
 	return (
 		<>

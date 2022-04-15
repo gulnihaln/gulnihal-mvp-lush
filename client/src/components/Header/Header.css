@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Parisienne&display=swap');
+.topnav {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 0px;
+    color: white;
+}
+
+.topnav a {
+    color: white;
+    /* padding: 4px; */
+    margin: 7px;
+}
+
+.topnav .vl {
+    background-color: white;
+    width: 2px;
+    margin: 7px;
+}
+
+.navbar-container {
+    display:flex;
+    justify-content: space-between;
+    margin: auto 50px;
+    max-height: 120px;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-icon {
+    padding: 8px;
+    font-size: 1.5rem;
+}
+
+.logo {
+    font-size: 3rem;
+    font-family: 'Finger Paint', cursive;
+}
+
+.search input {
+    border: none;
+    width: 500px;
+    padding-bottom: 5px;
+    height: 2rem;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: end;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+::placeholder {
+  font-size: 1.5rem;
+}

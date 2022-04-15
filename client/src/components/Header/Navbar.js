@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ImSearch } from "react-icons/im"
 import { FiSmile, FiShoppingBag } from "react-icons/fi";
 import { BiWorld } from "react-icons/bi"
+import "../Header/Header.css";
 
 export default function Navbar () {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
