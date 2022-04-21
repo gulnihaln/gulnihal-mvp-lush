@@ -1,6 +1,10 @@
 import express from "express";
 import morgan from "morgan";
 import path from "path";
+// import graphQL from "graphql";
+// import expressGraphQL from "express-graphql";
+// const expressGraphQL = require("express-graphql").graphqlHTTP;
+// const schema = require("./schema/schema");
 
 import router from "./api";
 import {
@@ -18,6 +22,13 @@ const app = express();
 app.use(express.json());
 app.use(configuredHelmet());
 app.use(morgan("dev"));
+// app.use(
+// 	"/graphql",
+// 	expressGraphQL({
+// 		schema,
+// 		graphiql: true,
+// 	})
+// );
 
 if (app.get("env") === "production") {
 	app.enable("trust proxy");
