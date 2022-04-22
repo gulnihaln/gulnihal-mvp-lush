@@ -7,6 +7,7 @@ import {
 	gql,
 } from "@apollo/client";
 import App from "./App";
+import { query } from "../src/utils/getQuery";
 
 const client = new ApolloClient({
 	uri: "https://twstg2.eu.saleor.cloud/graphql/",
@@ -15,36 +16,7 @@ const client = new ApolloClient({
 
 client
 	.query({
-		query: gql`
-			query GET_ALL {
-				products(channel: "uk", first: 25) {
-					edges {
-						node {
-							id
-							name
-							category {
-								name
-							}
-							# description,
-							rating
-							media {
-								url
-							}
-							pricing {
-								priceRange {
-									start {
-										gross {
-											currency
-											amount
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		`,
+		query: gql `${query}`,
 	})
 
 ReactDOM.render(
