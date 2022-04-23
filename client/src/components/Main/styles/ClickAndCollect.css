@@ -1,0 +1,60 @@
+.click-collect-container {
+    background-color: rgb(239, 239, 239);
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    max-width: 460px;
+    padding-left: 40px;
+}
+.click-collect {
+    display: flex;
+    /* margin: 1rem 0px; */
+    margin: auto;
+}
+ .return-click-collect {
+    margin-left: 40px;
+}
+.map-icon {
+    align-self: center;
+    padding-right: .6rem;
+    font-size: 1.2rem;
+}
+
+.click-collect h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.click-collect-container input {
+    width: 70%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    /* padding-left: 40px; */
+    
+}
+input::placeholder {
+  font-size: 1rem;
+}
+/* .find-store-container {
+      width: 90%;
+    height: 2rem;
+    margin-bottom: 1rem;
+} */
+.find-store-button {
+    height: 2rem;
+    /* margin-bottom: 1rem; */
+    padding-top: 7px;
+    padding-bottom: 26px;
+    font-size: 1rem;
+    margin-top: 4px;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    /* .click-collect-container {
+        margin-left: 40px;
+    }
+    .click-collect {
+        margin-left: 40px;
+    } */
+} 
