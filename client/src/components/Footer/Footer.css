@@ -21,19 +21,11 @@ footer {
     font-size: 0.75rem;
     padding: 1rem 0;
 }
-/* footer section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    font-size: 0.75rem;
-    padding: 1rem 0;
-} */
-section a {
+
+.footer-bottom {
     padding: 0.5rem 1.5rem;
 }
-a, p {
+footer a, footer p {
     color: white;
 }
 
@@ -70,20 +62,28 @@ input {
 }
 .social-icons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
 }
 .social-icons a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.5s ease;
+    padding-right: 1rem;
+    text-decoration: none;
 }
 .social-icons a:hover {
     transform: scale(1.15);
 }
-.footer-bottom {
-    text-align: center;
+.language {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+}
+.language p {
+    padding: 1rem;
 }
 @media screen and (min-width: 1024px) {
     .footer-top {

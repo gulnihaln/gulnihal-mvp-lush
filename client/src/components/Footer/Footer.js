@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BsTwitter, BsFacebook, BsInstagram } from "react-icons/bs";
 import { FiArrowLeft } from "react-icons/fi";
+import { BiWorld } from "react-icons/bi";
 import "./Footer.css";
 
 export default function Footer() {
@@ -19,9 +20,9 @@ export default function Footer() {
 							<form className="form">
 								<div>
 									<label htmlFor="email"></label>
-									<input type="email" id="email" placeholder="Email"required />
+									<input type="email" id="email" placeholder="Email" required />
 								</div>
-								<button type="submit">
+								<button type="submit" aria-label="send">
 									<FiArrowLeft />
 								</button>
 							</form>
@@ -95,32 +96,18 @@ export default function Footer() {
 							</ul>
 						</div>
 					</div>
-					<section>
-						<section className="social-icons">
-							<a
-								aria-label="Instagram"
-								href="https://www.instagram.com/?hl=en"
-								target={"_blank"}
-							>
-								<BsInstagram />
-							</a>
-							<a
-								aria-label="Facebook"
-								href="https://en-gb.facebook.com/"
-								target={"_blank"}
-							>
-								<BsFacebook />
-							</a>
-							<a
-								aria-label="Twitter"
-								href="https://twitter.com/"
-								target={"_blank"}
-							>
-								<BsTwitter />
-							</a>
+					<section className="social-icons">
+						<section className="language">
+							<p>
+								<BiWorld />
+								Country
+							</p>
+							<p>Language</p>
+							<p>Currency</p>
 						</section>
 						<p>© Copyright 2022 SPLUSH</p>
-						<a className="footer-bottom"
+						<a
+							className="footer-bottom"
 							href="https://github.com/gulnihaln/gulnihal-mvp-lush"
 							target={"_blank"}
 						>
