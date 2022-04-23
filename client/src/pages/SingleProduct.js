@@ -9,6 +9,7 @@ import Rating from "../components/Main/Rating";
 
 export default function SingleProduct() {
 
+	const location = useLocation();
 	const GET_ALL = gql`
 		${query}
 	`;
@@ -21,7 +22,6 @@ export default function SingleProduct() {
 		return <h1> loading </h1>;
 	}
 
-	const location = useLocation();
 	const path = location.pathname.split("/")[2];
 
 
@@ -45,7 +45,7 @@ export default function SingleProduct() {
 					<div className="image-links">
 						{node.media.map((img, index) => {
 							// console.log(img);
-							return <img key={img[index]} src={img.url}></img>;
+							return <img key={index} src={img.url}></img>;
 						})}
 					</div>
 					<img className="product-img" src={node.media[0].url}></img>

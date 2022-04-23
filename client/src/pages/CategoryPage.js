@@ -7,6 +7,7 @@ import "../components/Main/styles/ProductCard.css";
 
 
 export default function CategoryPage() {
+    const location = useLocation();
     const GET_ALL = gql `${query}`;
     const { loading, error, data } = useQuery(GET_ALL);
     if(error) {
@@ -17,7 +18,6 @@ export default function CategoryPage() {
     return <h1> loading</h1>;
     }
     
-    const location = useLocation();
     const path = location.pathname.split("/")[2].split("%20").join(" ");
 
     return (

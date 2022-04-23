@@ -7,6 +7,7 @@ import "./styles/Categories.css";
 import CategoriesDropdown from "./CategoriesDropdownMenu";
 
 export default function Categories () {
+	const location = useLocation();
 	const GET_ALL = gql`
 		${query}
 	`;
@@ -23,7 +24,6 @@ export default function Categories () {
 	let singleCategory = [...new Set(allCategories)];
 
 
-	const location = useLocation();
 	const path = location.pathname
 	
 	return (
@@ -35,7 +35,7 @@ export default function Categories () {
 					</Link>
 					{singleCategory.map((category) => {
 						return (
-							<Link to={`/all/${category}`}>
+							<Link to={`/all/${category}`} key={category}>
 								<button key={category}>{category}</button>
 							</Link>
 						);

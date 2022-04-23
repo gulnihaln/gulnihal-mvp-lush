@@ -1,65 +1,3 @@
-// import * as React from "react";
-// import IconButton from "@mui/material/IconButton";
-// import Menu from "@mui/material/Menu";
-// import MenuItem from "@mui/material/MenuItem";
-// // import MoreVertIcon from "@mui/icons-material/MoreVert";
-
-
-
-// const ITEM_HEIGHT = 48;
-
-// export default function DropdownMenuFeedback( {categories} ) {
-// 	const [anchorEl, setAnchorEl] = React.useState(null);
-// 	const open = Boolean(anchorEl);
-// 	const handleClick = (event) => {
-// 		setAnchorEl(event.currentTarget);
-// 	};
-// 	const handleClose = () => {
-// 		setAnchorEl(null);
-// 	};
-
-// 	return (
-// 		<div className="dropdown-icon">
-// 			<IconButton
-// 				aria-label="more"
-// 				id="long-button"
-// 				aria-controls={open ? "long-menu" : undefined}
-// 				aria-expanded={open ? "true" : undefined}
-// 				aria-haspopup="true"
-// 				onClick={handleClick}
-// 			>
-// 				{/* <MoreVertIcon /> */}
-// 			</IconButton>
-// 			<Menu
-// 				id="long-menu"
-// 				MenuListProps={{
-// 					"aria-labelledby": "long-button",
-// 				}}
-// 				anchorEl={anchorEl}
-// 				open={open}
-// 				onClose={handleClose}
-// 				PaperProps={{
-// 					style: {
-// 						maxHeight: ITEM_HEIGHT * 4.5,
-// 						width: "20ch",
-// 					},
-// 				}}
-// 			>
-//                 {categories.map((category) => {
-//                     return (
-//                         <MenuItem
-//                             key={category}
-//                             selected={{category} === "Pyxis"}
-//                             onClick={handleClose}
-//                         >
-//                         </MenuItem>
-//                     )
-//                 })}
-				
-// 			</Menu>
-// 		</div>
-// 	);
-// }
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import Button from "@mui/material/Button";
@@ -153,7 +91,7 @@ export default function CategoriesDropdownMenu ( { categories } ) {
 				</Link>
 				{categories.map((category) => {
 					return (
-						<Link to={`/all/${category}`}>
+						<Link to={`/all/${category}`} key={category}>
 							<MenuItem onClick={handleClose} key={category} disableRipple>
 								{category}
 							</MenuItem>
