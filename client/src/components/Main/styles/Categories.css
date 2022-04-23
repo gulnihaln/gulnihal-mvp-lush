@@ -1,0 +1,47 @@
+.category-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+
+}
+.category-buttons {
+    display: none;
+}
+.sort-filter button {
+    border: none;
+    background-color: rgb(234, 234, 234);
+    padding: 16px;
+    margin-right: 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .category-dropdown {
+        display: none;
+    }
+    .category-buttons {
+        display: inline-block;
+        max-width: 70%;
+    }
+    .category-buttons button {
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: white;
+        padding: 8px 20px;
+        margin-right: 8px;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: .9rem;
+        line-height: 1.7;
+        cursor: pointer;
+    }
+    .category-buttons button:hover {
+        border: 1px solid black;
+    }
+    .category-buttons button:focus {
+        background-color: black;
+        color: white;
+    }
+
+} 
