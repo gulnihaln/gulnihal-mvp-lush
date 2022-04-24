@@ -4,13 +4,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 90%;
+    width: 90%;
     border-radius: .5rem;
-    margin-left: 40px;
+    margin: auto;
     height: 400px;
     position: relative;
 }
-
 .card-img {
     position: absolute;
     bottom: 200px;
@@ -20,22 +19,17 @@
 .disabled {
     display: none;
 }
-
 .product-card-details {
     align-self: flex-end;
     color: black;
     font-family: 'Montserrat', sans-serif;
     align-self: flex-start;
-    /* justify-content: center; */
-    max-width: 80%;
     padding-left: 1rem;
     margin-top: 200px;
 }
-
 .product-name {
     font-size: 1.2rem;
 }
-
 .product-type {
     font-size: 1rem;
     font-weight: 300;
@@ -43,7 +37,6 @@
 .rating {
     text-align: start;
 }
-
 .products-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -51,7 +44,6 @@
     margin: auto;
     margin-top: 5rem;
 }
-
 .add-cart {
     border: 1px solid gray;
     border-radius: 20px;
