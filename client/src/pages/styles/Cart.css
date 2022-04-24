@@ -5,6 +5,7 @@
 	grid-gap: 1rem;
     margin: auto;
     max-width: 1440px;
+	font-family: 'Montserrat', sans-serif;
 }
 .cart-header h2 {
 	color: black;
@@ -59,7 +60,7 @@
     padding: 0;
     text-align: center;
 }
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 768px) {
 	.cart-header {
 		align-self: start;
 		grid-area: cart-header;
