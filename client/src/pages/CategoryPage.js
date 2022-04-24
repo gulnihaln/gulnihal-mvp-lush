@@ -18,7 +18,7 @@ export default function CategoryPage() {
     return <h1> loading</h1>;
     }
     
-    const path = location.pathname.split("/")[2].split("%20").join(" ");
+    const path = location.pathname.split("/")[1].split("%20").join(" ");
 
     return (
         <div className="products-container">

@@ -30,12 +30,12 @@ export default function Categories () {
 		<> {path !== "/cart" &&
 			<section className="category-container">
 				<div className="category-buttons">
-					<Link to="/all">
+					<Link to="/">
 						<button>All</button>
 					</Link>
 					{singleCategory.map((category) => {
 						return (
-							<Link to={`/all/${category}`} key={category}>
+							<Link to={`/${category}`} key={category}>
 								<button key={category}>{category}</button>
 							</Link>
 						);
