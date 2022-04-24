@@ -14,8 +14,10 @@ export default function Navbar () {
     return (
 			<>
 				<section className="navbar-container">
-					<div>
-						<h1 className="logo">SPLUSH</h1>
+					<div className="logo">
+						<Link to="/">
+							<h1>SPLUSH</h1>
+						</Link>
 					</div>
 					<div className="logo-hamburger-container">
 						<button
@@ -27,12 +29,8 @@ export default function Navbar () {
 						</button>
 						<nav className={`${isMenuOpen ? "open" : ""}`}>
 							<ul onClick={() => setIsMenuOpen(false)}>
-								<li>
-									Account
-								</li>
-								<li>
-									Region
-								</li>
+								<li>Account</li>
+								<li>Region</li>
 								<li>
 									<Link to="/cart">
 										<FiShoppingBag className="navbar-icon" />
@@ -47,10 +45,7 @@ export default function Navbar () {
 					</div>
 					<article className="navbar-menu">
 						<div className="search">
-							<input
-								type="text"
-								placeholder="Search..."
-								/>
+							<input type="text" placeholder="Search..." />
 							<ImSearch className="navbar-icon" />
 						</div>
 						<FiSmile className="navbar-icon" />

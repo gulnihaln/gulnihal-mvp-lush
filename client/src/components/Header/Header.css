@@ -24,16 +24,20 @@
     margin: 0px 1rem;
 
 }
-.header {
-    display: flex;
-    flex-direction: column;
-    /* margin: auto; */
-}
 .topnav a {
     color: white;
     /* padding: 4px; */
     margin: 7px;
-     align-self: center;
+    align-self: center;
+}
+.topnav .vl {
+    background-color: white;
+    width: 2px;
+    margin: 7px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
 }
 .hamburger {
     background-color: #fff;
@@ -72,54 +76,36 @@ nav.open ul li {
     display: flex;
     justify-content: space-between;
 }
-.topnav .vl {
-    background-color: white;
-    width: 2px;
-    margin: 7px;
-}
-
-/* .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    margin: auto 50px;
-    max-height: 120px;
-} */
 .navbar-menu {
     display: none;
 }
-
-.logo {
+.logo h1{
     font-size: 3rem;
     font-family: 'Finger Paint', cursive;
+    color: black;
 }
-
+.logo a {
+    text-decoration: none;
+}
 .search input {
     border: none;
     width: 200px;
     padding-bottom: 5px;
     height: 2rem;
 }
-
 .search {
     width: 200px;
     display: none;
 }
-
 ::placeholder {
   font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
-
 @media screen and (min-width: 595px) {
-    /* .navbar-menu-container {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-    } */
     .navbar-menu {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* padding: 8px; */
         font-size: 1.5rem;
         transition: all 0.4s ease;
     }
@@ -134,12 +120,6 @@ nav.open ul li {
     .open {
         display: none;
     }
-    /* .navbar-menu {
-        display: inline-block;
-        padding: 8px;
-        font-size: 1.5rem;
-        transition: all 0.4s ease;
-    } */
     .search {
         width: 200px;
         display: grid;
@@ -151,12 +131,4 @@ nav.open ul li {
     }
 } 
 @media screen and (min-width: 798px) {
-     /* .search {
-        width: 200px;
-        display: grid;
-        grid-template-columns: 90% 10%;
-        align-items: end;
-        margin-bottom: 20px;
-        border-bottom: 1px solid black;
-    } */
 } 
