@@ -1,7 +1,7 @@
-import AllProducts from "./AllProducts";
-import "./styles/ProductCard.css";
+import AllProducts from "../components/Main/AllProducts";
+import "../components/Main/styles/ProductCard.css";
 import { gql, useQuery } from "@apollo/client";
-import { query } from "../../utils/getQuery";
+import { query } from "../utils/getQuery";
 
 export default function Home() {
 
