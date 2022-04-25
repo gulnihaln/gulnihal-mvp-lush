@@ -1,15 +1,17 @@
 import "./styles/SingleProduct.css";
+import { useState } from "react";
 import AddToCartButton from "../components/Main/AddToCartButton";
 import { gql, useQuery } from "@apollo/client";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ClickAndCollect from "../components/Main/ClickAndCollect";
 import { query } from "../utils/getQuery";
 // import Weight from "../components/Main/Weight";
 import Rating from "../components/Main/Rating";
 
 export default function SingleProduct() {
-
+	const navigate = useNavigate();
 	const location = useLocation();
+	const [count, setCount] = useState(1)
 	const GET_ALL = gql`
 		${query}
 	`;
@@ -24,18 +26,16 @@ export default function SingleProduct() {
 
 	const path = location.pathname.split("/")[2];
 
-
 	const arr = data.products.edges.filter(({ node }) => node.id === path);
 	const { node } = arr[0];
 
-	//  console.log(products)
-	// if(node.weight === null){
-	// 	return (
-	// 		<p>Each</p>
-	// 	);
-	// }
+	function AddToCartHandle () {
 
-	// const hasWeight = node.weight.length > 0;
+		const currentCart = JSON.parse(localStorage.getItem("cartStorage") || "[]");
+		currentCart.push({ ...node, count })
+		localStorage.setItem("cartStorage", JSON.stringify(currentCart));
+		navigate("/cart");
+	}
 
 	// console.log(node);
 	return (
@@ -80,9 +80,15 @@ export default function SingleProduct() {
 									node.weight.value
 								} ${node.weight.unit.toLowerCase()}`}</button>
 							</li>
+							// <li>
+							// 	{node.weight.map(({ size }, index) => {
+							// 		// console.log(img);
+							// 		return <button key={index} src={size.value}></button>;
+							// 	})}
+							// </li>
 						)}
 						<li>
-							<AddToCartButton node={node} />
+							<AddToCartButton node={node} AddToCartHandle={AddToCartHandle} count={count} setCount={setCount} />
 							<p>
 								Pay later with Klarna. <a href="#">Learn more</a>
 							</p>
@@ -96,11 +102,6 @@ export default function SingleProduct() {
 					</h2>
 					<section className="product-info">
 						<ul>
-							{/* <li className="price">{node.rating} /100</li> */}
-							{/* <li className="type" key={node.id}>{node.productType.name}</li> */}
-							{/* <li className="category" key={node.id}>
-							{node.category.name}
-						</li> */}
 							<li className="description" key={node.seoDescription}>
 								{node.seoDescription}{" "}
 							</li>
