@@ -24,6 +24,7 @@
 	justify-self: end;
 	text-align: end;
 	width: 300px;
+	padding-bottom: 1rem;
 }
 .cart-item-explanations p {
 	color: black;
