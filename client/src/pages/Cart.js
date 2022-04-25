@@ -12,8 +12,12 @@ export default function Cart() {
 
 	useEffect(() => {
 		setCurrentCart(JSON.parse(localStorage.getItem("cartStorage") || "[]"));
-		console.log(currentCart);
+		// console.log(currentCart);
 	}, [isAmountChange]);
+
+	useEffect(() => {
+		window.scroll(0, 0);
+	}, []);
 
 	const total = currentCart.reduce((acc, curr) => {
 		return acc += curr.count * curr.pricing.priceRange.start.gross.amount;
