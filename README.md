@@ -20,7 +20,6 @@ https://gulnihal-splush.herokuapp.com/
 Things that I wanted to improve if I had time:
 - Render the image that is clicked in single product page
 - Add multiple weight values buttons so that users can choose different sizes and add to their cart
-- Update total cart item count and total price after I changed the count in cart item component
 - Add multilanguage / region support using i18next ( to practice )
 - Add a success page after check out completed
 
