@@ -2,12 +2,12 @@
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-gap: 1rem;
-	/* border: 2px solid rgb(3, 255, 45); */
+	box-shadow: 2px 2px 10px darkgray;
 }
 .cart-item {
 	border: 1px solid lightgray;
 	display: grid;
-	grid-template-columns: 2fr 3fr;
+	grid-template-columns: 2fr 3fr 1fr;
 	height: 240px;
 	position: relative;
 }
@@ -21,7 +21,9 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 2rem 2rem 2rem auto;
-	align-items: flex-start;
+	justify-self: end;
+	text-align: end;
+	width: 300px;
 }
 .cart-item-explanations p {
 	color: black;
@@ -39,6 +41,8 @@
 	padding: 5px;
 	width: 100px;
 	height: 3rem;
+	align-self: center;
+	justify-self: center;
 }
 .cart-item-close {
 	background-color: #fff;

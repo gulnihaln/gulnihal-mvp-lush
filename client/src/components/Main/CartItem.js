@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
 import "./styles/CartItem.css";
 
 export default function CartItem({ item, setIsAmountChange, RemoveItemHandle, total }) {
@@ -26,33 +27,35 @@ export default function CartItem({ item, setIsAmountChange, RemoveItemHandle, to
 	// cartItemsLocalStorage[currentItemIndex].count = newCount;
 	// localStorage.setItem("currentCart", JSON.stringify(cartItemsLocalStorage));
 	// }
-
+	const itemTotalPrice = (item.pricing.priceRange.start.gross.amount.toFixed(2) * currentCount).toFixed(2)
 	return (
 		<div className="cart-item">
-			<div className="cart-item-img-container">
-				<img
-					src={item.media[0].url}
-					alt={item.productname}
-					className={"productImage"}
-				/>
-			</div>
+			<Link to={`/product/${item.id}`}>
+				<div className="cart-item-img-container">
+					<img
+						src={item.media[0].url}
+						alt={item.productname}
+						className={"productImage"}
+					/>
+				</div>
+			</Link>
 			<div className="cart-item-explanations">
 				<p>{item.name}</p>
 				<p>{item.category.name}</p>
-				{/* <p>size: {item.weight.value}</p> */}
-				<p className="price">£{total}</p>
+				<p>
+					{`size: ${item.weight.value} ${item.weight.unit.toLowerCase()}`}
+				</p>
+				<p className="price">£{itemTotalPrice}</p>
 				{/* <p>{item.count}</p> */}
 				<select value={currentCount} name="itemCount" onChange={selectHandle}>
 					{amountOptions.map((num, index) => {
-						return (
-						<option key={index}>{num}</option>
-						);
+						return <option key={index}>{num}</option>;
 					})}
 				</select>
-				<button className="cart-item-close" onClick={deleteHandle}>
-					<MdClose />
-				</button>
 			</div>
+			<button className="cart-item-close" onClick={deleteHandle}>
+				<MdClose />
+			</button>
 		</div>
 	);
 }
