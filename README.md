@@ -24,8 +24,17 @@ Things that I wanted to improve if I had time:
 - Add multilanguage / region support using i18next ( to practice )
 - Add a success page after check out completed
 
-###############
 
+To run this project in root directory 
+# npm run dev
+
+in client
+# npm run dev:client
+
+in server
+# npm run dev:server
+
+###############
 # Starter Kit
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
