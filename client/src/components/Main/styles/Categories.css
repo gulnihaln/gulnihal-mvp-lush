@@ -1,8 +1,7 @@
 .category-container {
     display: flex;
-    justify-content: space-between;
-    margin: 40px;
-
+    flex-direction: column;
+    margin: auto;
 }
 .category-buttons {
     display: none;
@@ -15,10 +14,17 @@
     justify-content: center;
     cursor: pointer;
 }
+@media screen and (min-width: 595px) {
+    .category-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .category-dropdown {
         display: none;
+        margin: 40px;
     }
     .category-buttons {
         display: inline-block;
