@@ -42,9 +42,13 @@ export default function CartItem({ item, setIsAmountChange, RemoveItemHandle, to
 			<div className="cart-item-explanations">
 				<p>{item.name}</p>
 				<p>{item.category.name}</p>
-				<p>
-					{`size: ${item.weight.value} ${item.weight.unit.toLowerCase()}`}
-				</p>
+				{!item.weight ? (
+					<p> size: - </p>
+				) :
+				<p className="weight">
+						{`size: ${item.weight.value} ${item.weight.unit.toLowerCase()}`}
+					</p>
+				}
 				<p className="price">£{itemTotalPrice}</p>
 				{/* <p>{item.count}</p> */}
 				<select value={currentCount} name="itemCount" onChange={selectHandle}>
