@@ -21,9 +21,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-self:stretch; */
-    /* grid-column-start: 1;
-    grid-column-end: 3; */
     height: 100%;
     width: 80%;
     max-width: 460px;
@@ -33,6 +30,7 @@
 }
 .product li, .product-info li{
     list-style: none;
+    margin-bottom: 1.5rem;
 }
 .product a, p {
     color: black;

@@ -35,16 +35,11 @@
 input::placeholder {
   font-size: 1rem;
 }
-/* .find-store-container {
-      width: 90%;
-    height: 2rem;
-    margin-bottom: 1rem;
-} */
+.find-store-container {
+   list-style: none;
+}
 .find-store-button {
-    height: 2rem;
-    /* margin-bottom: 1rem; */
-    padding-top: 7px;
-    padding-bottom: 26px;
+    height: 3.5rem;
     font-size: 1rem;
     margin-top: 4px;
     text-align: center;

@@ -64,11 +64,13 @@ export default function SingleProduct() {
 						>
 							£{node.pricing.priceRange.start.gross.amount}
 						</li>
-						{node.rating && node.rating !== 0 ? (
-							<Rating node={node} />
-						) : (
-							<Rating isZero={true} />
-						)}
+						<li>
+							{node.rating && node.rating !== 0 ? (
+								<Rating node={node} />
+							) : (
+								<Rating isZero={true} />
+							)}
+						</li>
 						<li
 							className={!node.isAvailable ? "disable-availability" : "italic"}
 						>
@@ -88,7 +90,12 @@ export default function SingleProduct() {
 							// </li>
 						)}
 						<li>
-							<AddToCartButton node={node} AddToCartHandle={AddToCartHandle} count={count} setCount={setCount} />
+							<AddToCartButton
+								node={node}
+								AddToCartHandle={AddToCartHandle}
+								count={count}
+								setCount={setCount}
+							/>
 							<p>
 								Pay later with Klarna. <a href="#">Learn more</a>
 							</p>
