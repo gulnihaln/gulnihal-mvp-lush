@@ -1,3 +1,31 @@
+##############
+
+# Hi people who review this task !
+
+I used the started kit template which CodeYourFuture already shared with us for final projects.
+
+Firstly, I built my database, while I was trying to learn some graphQL.
+I fetched data from my local data to start my front end improvement.
+
+After I gained some knowledge about how to use graphQL, I found out that
+I just need to fetch data in front end using the graphQL playground that is shared in instructions.
+
+I have had challenges to reach the data in objects. I could print most of the data that I wanted except mapping through the weight to print multiple values. I'd like to improve my skills in using graphQL.
+
+I had also another challenge to deploy the project with Heroku. I had to spend time to solve Content Security Policy and Cross Origin Resource Policy issues.
+
+The project is available online now at:
+https://gulnihal-splush.herokuapp.com/
+
+Things that I wanted to improve if I had time:
+- Render the image that is clicked in single product page
+- Add multiple weight values buttons so that users can choose different sizes and add to their cart
+- Update total cart item count and total price after I changed the count in cart item component
+- Add multilanguage / region support using i18next ( to practice )
+- Add a success page after check out completed
+
+###############
+
 # Starter Kit
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
