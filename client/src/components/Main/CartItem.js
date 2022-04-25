@@ -19,7 +19,6 @@ export default function CartItem({ item, setIsAmountChange, RemoveItemHandle }) 
 	const cartItemsLocalStorage = JSON.parse(
 		localStorage.getItem("cartStorage") || "[]"
 		);
-		console.log(typeof cartItemsLocalStorage)
 		const currentItemIndex = cartItemsLocalStorage.findIndex(
 			(product) => product.id === item.id
 			);
