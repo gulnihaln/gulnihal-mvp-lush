@@ -1,20 +1,22 @@
 import "./styles/AddToCartButton.css";
-import { useState } from "react";
-import { FiPlus, FiMinus } from "react-icons/fi"
+// import { useState } from "react";
+import { FiPlus, FiMinus } from "react-icons/fi";
 
-export default function AddToCartButton( { node }) {
 
-	const [order, setOrder] = useState(1);
+export default function AddToCartButton( { node, AddToCartHandle, count, setCount }) {
+	
+
 	function addOne() {
-		setOrder(order + 1);
+		if(count <= 9)
+		setCount(count + 1);
 	}
 	function removeOne() {
-		if (order > 1) {
-			setOrder(order - 1);
+		if (count > 1) {
+			setCount(count - 1);
 		}
 	}
-	function amountToAdd (order, node){
-		return (order * node.pricing.priceRange.start.gross.amount).toFixed(2);
+	function amountToAdd (count, node){
+		return (count * node.pricing.priceRange.start.gross.amount).toFixed(2);
 	}
 	return (
 		<>
@@ -24,15 +26,15 @@ export default function AddToCartButton( { node }) {
 						<FiMinus />
 					</button>
 					<div className="total-item">
-						<p>{order}</p>
+						<p>{count}</p>
 					</div>
 					<button className="plus-button" onClick={addOne}>
 						<FiPlus />
 					</button>
 				</div>
-				<button className="add-cart-button">
+				<button className="add-cart-button" onClick={AddToCartHandle}>
 					Add to Cart - £
-					{amountToAdd(order, node)}
+					{amountToAdd(count, node)}
 				</button>
 			</div>
 		</>
