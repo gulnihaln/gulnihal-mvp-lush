@@ -40,7 +40,7 @@ export default function CartItem({ item, setIsAmountChange, RemoveItemHandle, to
 				<p>{item.name}</p>
 				<p>{item.category.name}</p>
 				{/* <p>size: {item.weight.value}</p> */}
-				<p className="price">£{total * currentCount}</p>
+				<p className="price">£{total}</p>
 				{/* <p>{item.count}</p> */}
 				<select value={currentCount} name="itemCount" onChange={selectHandle}>
 					{amountOptions.map((num, index) => {
