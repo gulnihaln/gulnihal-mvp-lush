@@ -91,7 +91,7 @@ export default function CategoriesDropdownMenu ( { categories } ) {
 				</Link>
 				{categories.map((category) => {
 					return (
-						<Link to={`/all/${category}`} key={category}>
+						<Link to={`/${category}`} key={category}>
 							<MenuItem onClick={handleClose} key={category} disableRipple>
 								{category}
 							</MenuItem>
