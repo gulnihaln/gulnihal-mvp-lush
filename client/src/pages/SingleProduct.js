@@ -1,5 +1,5 @@
 import "./styles/SingleProduct.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddToCartButton from "../components/Main/AddToCartButton";
 import { gql, useQuery } from "@apollo/client";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -15,6 +15,9 @@ export default function SingleProduct() {
 	const GET_ALL = gql`
 		${query}
 	`;
+	useEffect(() => {
+		window.scroll(0, 0);
+	}, []);
 	const { loading, error, data } = useQuery(GET_ALL);
 	if (error) {
 		return <h1> error</h1>;
@@ -82,12 +85,6 @@ export default function SingleProduct() {
 									node.weight.value
 								} ${node.weight.unit.toLowerCase()}`}</button>
 							</li>
-							// <li>
-							// 	{node.weight.map(({ size }, index) => {
-							// 		// console.log(img);
-							// 		return <button key={index} src={size.value}></button>;
-							// 	})}
-							// </li>
 						)}
 						<li>
 							<AddToCartButton
