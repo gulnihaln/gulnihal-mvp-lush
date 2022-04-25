@@ -1,11 +1,12 @@
-* {
-    list-style-type: none;
-    font-family: 'Montserrat', sans-serif;
-}
 footer {
+    font-family: 'Montserrat', sans-serif;
     margin-top: 40px;
     background-color: black;
     padding-top: 2rem;
+}
+
+footer ul {
+    list-style: none;
 }
 .footer-top {
     display: flex;
@@ -54,7 +55,6 @@ input {
 .footer-links-container a, .footer-company-container a {
     padding: 0.5rem 0rem;
     display: block;
-    /* list-style: none; */
     font-weight: 300;
     font-size: 0.75rem;
     text-align: center;
