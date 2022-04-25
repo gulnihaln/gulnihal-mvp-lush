@@ -3,30 +3,33 @@ import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./styles/CartItem.css";
 
-export default function CartItem({ item, setIsAmountChange, RemoveItemHandle, total }) {
+export default function CartItem({ item, setIsAmountChange, RemoveItemHandle }) {
 	const [currentCount, setCurrentCount] = useState(item.count);
-	// const [currentPrice, setCurrentPrice] = useState(total)
 
 	const amountOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	function selectHandle(event) {
-		//find product from local storage and update amount
-		// updateStorageCount(item, +event.target.value)
+		updateStorageCount(item, +event.target.value)
 		setTimeout(setCurrentCount(+event.target.value), 0);
 		setIsAmountChange((prev) => !prev);
 	}
 	function deleteHandle() {
 		RemoveItemHandle(item.id);
 	}
-	// function updateStorageCount(product, newCount) {
-	// const cartItemsLocalStorage = JSON.parse(
-	// 	localStorage.getItem("currentCart") || "[]"
-	// );
-	// const currentItemIndex = cartItemsLocalStorage.findIndex(
-	// 	(product) => product.id === item.id
-	// );
-	// cartItemsLocalStorage[currentItemIndex].count = newCount;
-	// localStorage.setItem("currentCart", JSON.stringify(cartItemsLocalStorage));
-	// }
+	function updateStorageCount(product, newCount) {
+	const cartItemsLocalStorage = JSON.parse(
+		localStorage.getItem("cartStorage") || "[]"
+		);
+		console.log(typeof cartItemsLocalStorage)
+		const currentItemIndex = cartItemsLocalStorage.findIndex(
+			(product) => product.id === item.id
+			);
+			cartItemsLocalStorage[currentItemIndex].count = newCount;
+			localStorage.setItem(
+				"cartStorage",
+				JSON.stringify(cartItemsLocalStorage)
+			);
+	}
+
 	const itemTotalPrice = (item.pricing.priceRange.start.gross.amount.toFixed(2) * currentCount).toFixed(2)
 	return (
 		<div className="cart-item">
