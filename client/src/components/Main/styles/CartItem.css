@@ -38,7 +38,7 @@
 .cart-item-explanations select {
 	border: 1px solid black;
 	font-weight: 500;
-	margin-top: 2rem;
+	/* margin-top: 2rem; */
 	padding: 5px;
 	width: 100px;
 	height: 3rem;
