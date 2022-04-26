@@ -37,6 +37,7 @@ export default function Cart() {
 	function RemoveItemHandle (id) {
 		const removedItem = currentCart.filter((item) => item.id != id);
 		setCurrentCart(removedItem);
+		localStorage.setItem("cartStorage", JSON.stringify([]));
 	}
 	return (
 		<>
